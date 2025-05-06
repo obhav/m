@@ -1,0 +1,47 @@
+export MPJ_HOME=/home/omkar666/mpj
+
+export PATH=$PATH:$MPJ_HOME/bin
+
+source ~/.bashrc
+
+javac -cp .:/home/omkar666/mpj/lib/mpj.jar Parallelsum.java
+
+mpjrun.sh -np 3 -cp . Parallelsum
+
+
+
+
+export MPJ_HOME=/home/stes@stes/mpj
+
+export PATH=$PATH:$MPJ_HOME/bin
+
+source ~/.bashrc
+
+javac -cp .:/home/stes@stes/mpj/lib/mpj.jar Parallelsum.java
+
+mpjrun.sh -np 3 -cp . Parallelsum
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+wget https://sourceforge.net/projects/mpjexpress/files/latest/download -O mpj.zip
+unzip mpj.zip
+mv mpj-v*/ mpj
+
+
+export MPJ_HOME=~/mpj       # or wherever you extracted it
+export PATH=$PATH:$MPJ_HOME/bin
+
+javac -cp $MPJ_HOME/lib/mpj.jar DistributedSum.java
+
+mpjrun.sh -np 4 -cp . DistributedSum
